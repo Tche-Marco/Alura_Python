@@ -9,6 +9,12 @@ class ExtratorURL:
     def __len__(self):
         return len(self.url)
 
+    def __str__(self):
+        return self.url + '\nParâmetros: ' + self.get_url_parametros()
+
+    def __eq__(self, other):
+        return self.url == other.url
+
     def sanitiza_url(self, url):
         if type(url) == str:
             return url.strip()
@@ -48,4 +54,5 @@ class ExtratorURL:
 extrator_url = ExtratorURL(
     "https://bytebank.com/cambio?moedaDestino=dolar&moedaOrigem=real&quantidade=100")
 valor_quantidade = extrator_url.get_valor_parametro('quantidade')
+print(extrator_url)
 print(valor_quantidade)
