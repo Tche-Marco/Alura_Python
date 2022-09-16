@@ -1,4 +1,4 @@
-from importlib.util import set_loader
+import requests
 
 
 class BuscaEndereco:
@@ -20,3 +20,13 @@ class BuscaEndereco:
 
     def format_cep(self):
         return '{}-{}'.format(self.cep[:5], self.cep[5:])
+
+    def acessa_via_cep(self): 
+        url = f"https://viacep.com.br/ws/{self.cep}/json/"
+        r = requests.get(url)
+        dados = r.json()
+        return (
+            dados['bairro'],
+            dados['localidade'],
+            dados['uf']
+        )

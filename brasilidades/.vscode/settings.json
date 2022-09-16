@@ -1,4 +1,13 @@
 {
   "python.linting.pylintEnabled": true,
-  "python.linting.enabled": false
+  "python.linting.enabled": false,
+  "cSpell.language": "en,pt",
+  "cSpell.words": [
+    "cnpj",
+    "docbr",
+    "Endereco",
+    "padrao",
+    "sabado",
+    "validador"
+  ]
 }
