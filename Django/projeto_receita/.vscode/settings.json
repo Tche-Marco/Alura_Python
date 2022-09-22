@@ -2,5 +2,8 @@
   "cSpell.words": [
     "alurareceita",
     "liquidificador"
+  ],
+  "python.linting.pylintArgs": [
+    "--load-plugins=pylint_django"
   ]
 }
