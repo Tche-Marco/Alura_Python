@@ -1,8 +1,11 @@
 import re
+from validate_docbr import CPF
 
 
-def cpf_valido(cpf):
-    return len(cpf) == 11
+def cpf_valido(numero_cpf):
+    cpf = CPF()
+
+    return cpf.validate(numero_cpf)
 
 
 def nome_valido(nome):
@@ -20,5 +23,5 @@ def celular_valido(celular):
 
     if retorno and len(celular) == 13:
         return retorno
-        
+
     return False

@@ -1,4 +1,4 @@
-from rest_framework import viewsets
+from rest_framework import viewsets, filters
 from clientes.serializers import ClienteSerializer
 from clientes.models import Cliente
 
